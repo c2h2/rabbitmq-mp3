@@ -13,7 +13,7 @@ install rabbit-server, mpg123 and amqp gem, for example on ubuntu machine would 
 
 
 
-on the emiiter side
+on the emitter side
 ===================
 
 + configure rabbit server address emit_mp3.rb
