@@ -2,8 +2,12 @@
 # encoding: utf-8
 
 require "amqp"
+SERVER = "localhost"
+SSL = false
+PORT = 5672
 
-AMQP.start(:host => "localhost") do |connection|
+
+AMQP.start(:host => SERVER, :ssl => SSL, :port => PORT)  do |connection|
   channel  = AMQP::Channel.new(connection)
   exchange = channel.fanout("mp3")
   queue    = channel.queue("", :exclusive => true)
